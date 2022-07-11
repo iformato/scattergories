@@ -12,22 +12,7 @@ public class scattergories {
 		String answers2[] = {"x","x"};
 		int currentAnswers = 0;
 		int currentAnswers2 = 0;
-		ArrayList<String> words = new ArrayList<>();
 		char letters[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-		try {
-			File myObj = new File("file1.txt");
-			Scanner myReader = new Scanner(myObj);
-			while (myReader.hasNextLine()) {
-				String data = myReader.nextLine();
-				words.add(data);
-			}
-			myReader.close();
-			System.out.println(words);
-		} catch (FileNotFoundException e) { 
-			System.out.println("An error occured.");
-			e.printStackTrace();
-							
-		}
 
 		//randomly select letter
 		Random rand = new Random();
@@ -103,7 +88,7 @@ public class scattergories {
 			System.out.println("Player2, how many of Player 1's answers were valid?");
 			userInput = myScan.nextLine();
 			String player1Score = userInput;
-			System.out.println(answers2[1]);
+			System.out.println("Player 2 Answers:\r\nBuilding:" + answers2[0] + "\r\nPeople: " + answers2[1]);
 			System.out.println("Player1, how many of Player2's answers were valid?");
 			userInput = myScan.nextLine();
 			String player2Score = userInput;
@@ -119,7 +104,7 @@ public class scattergories {
 		
 			System.out.println(answers);
 	} else {
-		System.out.println("Somethingggg went wrong");
+		System.out.println("Another time!");
 		
 	}
 
